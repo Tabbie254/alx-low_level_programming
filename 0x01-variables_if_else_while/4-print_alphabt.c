@@ -1,4 +1,4 @@
-#includ <stdio.h>
+#include <stdio.h>
 
 /**
  * main -text input
@@ -12,7 +12,9 @@ int main(void)
 	while (c <= 'z')
 	{
 		if (c != 'q' && c != 'e')
+		{
 			putchar(c);
+		}
 
 		c++;
 	}
