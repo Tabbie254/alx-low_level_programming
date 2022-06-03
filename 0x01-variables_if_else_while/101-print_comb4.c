@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - text input
+ * main - text stdout
  *
- * Return: always 0 (if success)
+ * Return: always 0 (id success)
  */
 int main(void)
 {
 	int d = 48, a = 48, i = 48;
 
-	
 	while (d < 58)
 	{
 		a = 48;
@@ -18,11 +17,12 @@ int main(void)
 			i = 48;
 			while (i < 58)
 			{
-				if (d != a && d != i && d < a && a < i)
+				if (d != a && != i && d !=i && d < a && a < i)
 				{
 					putchar(d);
 					putchar(a);
 					putchar(i);
+
 					if (!(d == 55 && a == 56 && i == 57))
 					{
 						putchar(',');
@@ -33,10 +33,9 @@ int main(void)
 			}
 			a++;
 		}
-		d++;
+		d++
 	}
 	putchar('\n');
 
-
-	return(0);
+	return (0);
 }
