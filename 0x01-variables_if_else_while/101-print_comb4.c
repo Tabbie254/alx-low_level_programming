@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+/**
+ * main - text input
+ *
+ * Return: always 0 (if success)
+ */
+int main(void)
+{
+	int d = 48, a = 48, i = 48;
+
+	
+	while (d < 58)
+	{
+		a = 48;
+		while (a < 58)
+		{
+			i = 48;
+			while (i < 58)
+			{
+				if (d != a && d != i && d < a && a < i)
+				{
+					putchar(d);
+					putchar(a);
+					putchar(i);
+					if (!(d == 55 && a == 56 && i == 57))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				i++;
+			}
+			a++;
+		}
+		d++;
+	}
+	putchar('\n');
+
+
+	return(0);
+}
