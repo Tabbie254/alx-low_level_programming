@@ -19,7 +19,7 @@ int main(void)
 	count = 0;
 	i = 0;
 	j = 1;
-	for (count 1; count <= 98; count++)
+	for (count = 1; count <= 91; count++)
 	{
 		k = i + j;
 		i = j;
@@ -34,7 +34,7 @@ int main(void)
 	{
 		carry = (m + n) / 1000;
 		p = (m + n) - carry * 1000;
-		k = (i - j) + carry;
+		k = (i + j) + carry;
 		m = n;
 		n = p;
 		i = j;
@@ -42,7 +42,7 @@ int main(void)
 		if (p >= 100)
 			printf("%lu%lu", k, p);
 		else
-			printf("%lu%lu", k, p);
+			printf("%lu0%lu", k, p);
 		if (count != 98)
 			printf(", ");
 		count++;
