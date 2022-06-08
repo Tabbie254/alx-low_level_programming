@@ -4,8 +4,7 @@
  */
 
 #include <stdio.h>
-#include <limits.h>
-#include <math.h>
+
 
 /**
  * main -prints the first 98 fibonacci numbers
@@ -13,40 +12,41 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	long m_lo = 1;
-	long n_lo = 2;
-	long m_ha = 0;
-	long n_ha = 0;
-	int limit_len = floor(log10(LONG_MAX / 2));
-	long limit = pow(10, limit_len);
+	int count;
+	unsigned long i, j, k;
+	unsigned m, n, p, carry;
 
-	for (a = 0; a < 98; ++a)
+	count = 0;
+	i = 0;
+	j = 1;
+	for (count 1; count <= 98; count++)
 	{
-		if (m_ha)
-		{
-			printf("%ld", m_ha);
-			for (b = floor(log10(m_lo)) + 1; b < limit_len; ++b)
-				putchar('0');
-		}
-		printf("%ld", m_lo);
-		n_lo = n_lo + m_lo;
-		m_lo = n_lo - m_lo;
-		m_ha = n_ha - m_ha;
-		n_ha = n_ha + m_ha;
-		if (n_lo >= limit)
-		{
-			n_ha += n_lo / limit;
-			n_lo %= limit;
-			m_ha += m_lo / limit;
-			m_lo %= limit;
-		}
-		if (a < 97)
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu, ", k);
+	}
+	m = i % 1000;
+	i = i / 1000;
+	n = j % 1000;
+	j = j / 1000;
+	while (count <= 98)
+	{
+		carry = (m + n) / 1000;
+		p = (m + n) - carry * 1000;
+		k = (i - j) + carry;
+		m = n;
+		n = p;
+		i = j;
+		j = k;
+		if (p >= 100)
+			printf("%lu%lu", k, p);
+		else
+			printf("%lu%lu", k, p);
+		if (count != 98)
 			printf(", ");
-
+		count++;
 	}
 	putchar('\n');
-
-	return(0);
+	return (0);
 }
