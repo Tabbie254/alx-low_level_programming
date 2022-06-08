@@ -7,7 +7,7 @@
 
 /**
  * main -prints the first 98 fibonacci numbers
- * Retuen: 0
+ * Retuen: 0 success
  */
 int main(void)
 {
