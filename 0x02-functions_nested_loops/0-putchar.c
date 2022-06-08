@@ -7,7 +7,7 @@
 #include "main.h"
 
 /**
- * main - prints "_Putchar" followed by new line
+ * main - prints "_putchar" followed by new line
  *
  * Return : 0 always when successful.
  */
