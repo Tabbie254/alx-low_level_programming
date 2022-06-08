@@ -28,6 +28,7 @@ int main(void)
 		{
 			printf("%ld", m_ha);
 			for (b = floor(log10(m_lo)) + 1; b < limit_len; ++b)
+				putchar('0');
 		}
 		printf("%ld", m_lo);
 		n_lo = n_lo + m_lo;
