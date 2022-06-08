@@ -8,8 +8,9 @@
 
 /**
  * main - prints "_putchar" followed by new line
+ * Description: prints '_putchar'
  *
- * Return : 0 always when successful.
+ * Return : always 0 when successful.
  */
 int main(void)
 {
