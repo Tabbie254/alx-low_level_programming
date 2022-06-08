@@ -9,8 +9,9 @@
 /**
  * main - prints "_putchar" followed by new line
  * Description: prints '_putchar'
+ * added comit message return 0
  *
- * Return : always 0 when successful.
+ * Return: 0 success
  */
 int main(void)
 {
