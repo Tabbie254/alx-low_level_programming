@@ -4,6 +4,8 @@
  */
 
 #include <stdio.h>
+#include <limits.h>
+#include <math.h>
 
 /**
  * main -prints the first 98 fibonacci numbers
@@ -11,44 +13,39 @@
  */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
-	unsigned long fib1_half1, fib1_half2, fib2_half1, fib2_half2;
-	unsigned long half1, half2;
+	int a;
+	int b;
+	long m_lo = 1;
+	long n_lo = 2;
+	long m_ha = 0;
+	long n_ha = 0;
+	int limit_len = floor(log10(LONG_MAX / 2));
+	long limit = pow(10, limit_len);
 
-	for (count = 0; count < 92; count++)
+	for (a = 0; a < 98; ++a)
 	{
-		sum = fib1 + fib2;
-		printf("%lu, ", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-	}
-
-	fib1_half1 = fib1 / 10000000000;
-	fib2_half1 = fib2 / 10000000000;
-	fib1_half1 = fib1 % 10000000000;
-	fib2_half2 = fib2 % 10000000000;
-
-	for (count = 93; count < 99; count++)
-	{
-		half1 = fib1_half1 + fib2_half1;
-		half2 = fib1_half2 + fib2_half2;
-		if (fib1_half2 + fib2_half2 > 9999999999)
+		if (m_ha)
 		{
-			half1 += 1;
-			half2 %= 10000000000;
+			printf("%ld", m_ha);
+			for (b = floor(log10(m_lo)) + 1; b < limit_len; ++b)
 		}
-
-		printf("%lu%lu", half1, half2);
-		if (count != 98)
+		printf("%ld", m_lo);
+		n_lo = n_lo + m_lo;
+		m_lo = n_lo - m_lo;
+		m_ha = n_ha - m_ha;
+		n_ha = n_ha + m_ha;
+		if (n_lo >= limit)
+		{
+			n_ha += n_lo / limit;
+			n_lo %= limit;
+			m_ha += m_lo / limit;
+			m_lo %= limit;
+		}
+		if (a < 97)
 			printf(", ");
 
-		fib1_half1 = fib2_half1;
-		fib1_half2 = fib2_half2;
-		fib2_half1 = half1;
-		fib2_half2 = half2;
 	}
-	printf("\n");
-	return (0);
+	putchar('\n');
+
+	return(0);
 }
