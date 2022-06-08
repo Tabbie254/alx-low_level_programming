@@ -3,6 +3,7 @@
 
 /*
  * File: main.h
+ * Auth: Tabbie Mutiso
  *
  *
  */
