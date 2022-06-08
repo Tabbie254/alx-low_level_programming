@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - prints all numbers 
+ * print_to_98 - prints all numbers
  * @n: number being counted
  */
 void print_to_98(int n)
