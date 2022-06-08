@@ -9,7 +9,7 @@
  * _isalpha - checks if a character is alphabetic
  * @c: checked character
  *
- * Return 1 if char is .etter else 0
+ * Return: 1 if char is .etter else 0
  */
 int _isalpha(int c)
 {
