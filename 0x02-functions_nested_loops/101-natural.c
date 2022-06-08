@@ -2,6 +2,7 @@
  * File: 101-natural.c
  * Auth: Tabbie Mutiso
  */
+#include <stdio.h>
 #include "main.h"
 
 /**
