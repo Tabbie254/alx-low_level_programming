@@ -2,6 +2,7 @@
 
 /**
  * more_numbers - prints more numbers
+ * Description: nested while loops to print from 0 to 14
  * Return: nothing
  */
 
@@ -12,19 +13,19 @@ void more_numbers(void)
 
 	i = 0;
 
-	while (i < 10)
+	while (i <= 9)
 	{
-		for (j 0; j < 15; j++)
+		j = 10;
+		while (j <= 14)
 		{
-			if (j >= 10)
+			if (j > 9)
 			{
-				_putchar((j / 10) + 48);
+				_putchar(j / 10 + '0');
 			}
-			_putchar((j % 10) + 48);
+			_putchar(j % 10 + '0');
+			j++;
 		}
-
-		_putchar('\n');
-
 		i++;
+		_putchar('\n');
 	}
 }
