@@ -7,12 +7,9 @@
 
 int _isdigit(int c)
 {
-	char digit;
-
-	for (digit = '0'; digit <= '9'; digits++)
+	if (c >= 48 && c <= 57)
 	{
-		if (digit == c)
-			return (1);
+		return (1);
 	}
 	return (0);
 }
