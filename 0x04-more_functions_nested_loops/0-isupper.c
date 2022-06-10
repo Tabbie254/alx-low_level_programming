@@ -12,7 +12,7 @@ int _isupper(int c)
 	for (alpha = 'A'; alpha <= 'Z'; alpha++)
 	{
 		if (c == alpha)
-			return(1);
+			return (1);
 	}
 
 	return (0);
