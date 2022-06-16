@@ -3,7 +3,7 @@
  * _strcat - concatenates two strings
  * @dest: Apointer to a character that will be changed
  * @src: Apointer to a character that will also be changed
- * Return: dest 
+ * Return: dest
  */
 
 char *_strcat(char *dest, char *src)
