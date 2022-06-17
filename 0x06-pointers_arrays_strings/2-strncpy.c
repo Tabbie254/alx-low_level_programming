@@ -19,7 +19,7 @@ dest[i] = src[i];
 i++;
 }
 
-while (i < 0)
+while (i < n)
 {
 dest[i] = '\0';
 i++;
