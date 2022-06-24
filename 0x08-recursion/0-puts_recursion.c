@@ -4,11 +4,11 @@
  * @s: pointer block of memory to fill
  * Reurn: void
  */
-void _puts_recursion(chr *s)
+void _puts_recursion(char *s)
 {
 if (*s == '\0')
 {
-_putschar('\n');
+_putchar('\n');
 return;
 }
 _putchar (*s);
